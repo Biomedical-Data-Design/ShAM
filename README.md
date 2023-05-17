@@ -1,7 +1,7 @@
 # ShAM
 Shapley Anything Model 
 
-Author: Mike (Siyu) Wang, Kuai Yu, Ishan Kalburge
+Author: [Mike (Siyu) Wang](https://github.com/mikewang928), [Kuai Yu](https://github.com/quick2063706271), [Ishan Kalburge](https://github.com/kalburge)
 ## Overview
 ```
 Documentation: contains steps for inpainting for generative inpainting pytorch and using Rockfish.
