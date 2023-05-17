@@ -17,7 +17,10 @@
    3. Inpainting-based:
        1. Run `gan_mask_generate.py`.
        2. It should generate masked file for inpainting.
+       3. Follow the instruction in `Example Inpainting Code Guide.pdf` in the `Documentation` to generate cells one by one. 
+
+       ![img.png](readme_image/img2.png)
    
 2. Change the generated file directory in the python file under `shap_cal` to run shapley value calculation.
    1. Run the `shap` python file accordingly based on your generated images. i.e. if you use generate gaussian based images, run `shap_mike_withGaussianMask.py`.
-   2. For the generative inpainting, follow the instruction in `Example Inpainting Code Guide.pdf` in the `Documentation` to generate cells one by one. Then run step i.
+   
