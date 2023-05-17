@@ -16,7 +16,8 @@ import matplotlib.pyplot as plt
 k = 1
 num_parts = 4
 # grey_area = [0]  ###block number
-image = cv2.imread('1f8f08ea-b5b3-4f68-94d4-3cc071b7dce8.png')
+filename = '1f8f08ea-b5b3-4f68-94d4-3cc071b7dce8.png'
+image = cv2.imread(filename)
 
 def generate_combinations(num_parts):
     list_parts = list(range(num_parts))
