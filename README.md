@@ -15,3 +15,4 @@ VAE_GAN_experiment: contains files for VAE and GAN for studying data distributio
 superpixel_experiment: contains files for using skimage superpixel
 
 ```
+* Details for using quadrant-based Feature Reduction and The Shapley Anything Model is inside each folder
