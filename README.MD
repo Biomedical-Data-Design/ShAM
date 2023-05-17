@@ -1,2 +1,0 @@
-# ShAM
-Shapley Anything Model 
