@@ -1,6 +1,15 @@
 import numpy as np
 
 def mask_generate(k,grey_area, size):
+    """
+    assign quadents of the image to black (masking certain region of the image to black) for masks for gan
+    input:
+      I: image
+      k: quadents index
+      grey area: quadents indexs that to be black out
+    output:
+      I_copy: is the blacked out masked image
+    """
     I = np.zeros(size,dtype=np.uint8)
     shape1=I.shape[0]//(2**k)
     shape2=I.shape[1]//(2**k)

@@ -101,23 +101,21 @@ directory = '/Users/mikewang/Library/CloudStorage/OneDrive-JohnsHopkins/Study/Ma
 
 
 #%%
-def ToCV2ImageShape(PytorchImage):
-    num_channels, num_row, num_col = PytorchImage.shape
-    CV2Image = np.ones((num_row, num_col,num_channels)).astype('uint8')
-    for i in range(num_channels):
-        CV2Image[:,:,i] = PytorchImage[i,:,:]
-    return CV2Image
-
-    
-def ToPytorchImageShape(CV2Image):
-    num_row, num_col, num_channels = CV2Image.shape
-    PytorchImage = np.ones((num_channels, num_row, num_col)).astype('uint8')
-    for i in range(num_channels):
-        PytorchImage[i,:,:] = CV2Image[:,:,i] 
-    return PytorchImage
-
-
 def exclude_k_matrics_calculation(k,directory, M):
+    """Calculate prediction score for patched images excluding player k
+
+    :param k: integer representing player k
+    :param directory: directory contains intermediate images
+    :param M: integer represents the number of player
+    :param model: pytorch model
+    :return:
+    list of all player combinations that excludes player k,
+    corresponding team index of each of the player combinations that excludes player k
+    list of players
+    corresponding prediction probability of containing sick cell
+    list of all player combinations that includes player k,
+    corresponding team index of each of the player combinations that includes player k
+    """
     exclude_player2_list = []
     exclude_player2_team_index_list = []
     player_list = []
@@ -180,6 +178,18 @@ def exclude_k_matrics_calculation(k,directory, M):
 
 #%% calcualte shaply
 def shap_k_calulation(k, exclude_playerk_list, exclude_playerk_team_index_list, player_list, probList, contains_playerk_list, contains_playerk_team_index_list):
+    """ Calculate the shapley value for player k
+
+    :param k: player k
+    :param exclude_playerk_list: list of all player combinations that excludes player k
+    :param exclude_playerk_team_index_list: corresponding team index of each of the player combinations that excludes player k
+    :param player_list: list of players
+    :param probList: corresponding prediction probability of containing sick cell
+    :param contains_playerk_list: list of all player combinations that includes player k
+    :param contains_playerk_team_index_list: corresponding team index of each of the player combinations that includes player k
+    :param M: num of players
+    :return: shapley value
+    """
     shap_k = 0
     for i, teams_withk in enumerate(contains_playerk_list):
         
@@ -201,6 +211,14 @@ def shap_k_calulation(k, exclude_playerk_list, exclude_playerk_team_index_list, 
 
 
 def shap_main(k_list, directory, M):
+    """Run Shapley Calculation for model by assessing each player in k_list with images we obtained from directory
+
+    :param k_list: a list contains players (integers)
+    :param directory: directory contains images
+    :param M: int represents number of player
+    :param model: model for Shapley value evaluations
+    :return: a list in the format of [(player_id, shapley_score), ...]
+    """
     shap_value_list = []
     for k in k_list:     
         print("====================== looking at k=" + str(k))

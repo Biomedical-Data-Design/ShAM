@@ -20,6 +20,13 @@ filename = '1f8f08ea-b5b3-4f68-94d4-3cc071b7dce8.png'
 image = cv2.imread(filename)
 
 def generate_combinations(num_parts):
+    '''
+    generate all combinations of different players (total of num_parts players)
+    input:
+      num_parts: total number of players
+    output:
+      combination_list: list of all different combinations
+    '''
     list_parts = list(range(num_parts))
     combination_list = []
     for i in range(num_parts+1):
@@ -28,6 +35,15 @@ def generate_combinations(num_parts):
     return combination_list
 
 def generate_masked_images(I,k, num_parts, save_dir, isSmall, mask_type, std=None):
+    '''
+    generate all black out images with all different combinations using Gaussian
+    input:
+      I: image
+      k: player index
+      num_parts: total number of players
+      save_dir: the directory to save the black out masked image
+      isSmall: if output a small size image (small 256*256*3, if not small 1200*1600*3)
+    '''
     grey_area_list_tuple = generate_combinations(num_parts)
     grey_area_list = []
     for i in range(len(grey_area_list_tuple)):

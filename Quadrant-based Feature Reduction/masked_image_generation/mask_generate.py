@@ -20,6 +20,15 @@ import matplotlib.pyplot as plt
 import cv2
 import matplotlib.pyplot as plt
 def mask_generate(I,k,grey_area):
+    """
+    assign quadents of the image to black (masking certain region of the image to black)
+    input:
+      I: image
+      k: quadents index
+      grey area: quadents indexs that to be black out
+    output:
+      I_copy: is the blacked out masked image
+    """
     I_copy = I.copy()
     shape1=I.shape[0]//(2**k)
     shape2=I.shape[1]//(2**k)
