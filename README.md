@@ -1,7 +1,7 @@
 # ShAM
 Shapley Anything Model 
 
-Author: Mike (Siyu) Wang, Kuai Yu, Ishan Kalburge
+Authors: [Mike (Siyu) Wang](https://github.com/mikewang928), [Kuai Yu](https://github.com/quick2063706271), [Ishan Kalburge](https://github.com/kalburge)
 ## Overview
 ```
 Documentation: contains steps for inpainting for generative inpainting pytorch and using Rockfish.
@@ -16,3 +16,4 @@ superpixel_experiment: contains files for using skimage superpixel
 
 ```
 * Details for using `quadrant-based Feature Reduction` and `The Shapley Anything Model` is inside each folder
+* We give credit to the authors of generative-inpainting model as well as h-shap prediction model based on BBBC041. The detailed link to those directory could be found in [Inpainting Model](https://github.com/daa233/generative-inpainting-pytorch) and [h-shap](https://github.com/Sulam-Group/h-shap)
