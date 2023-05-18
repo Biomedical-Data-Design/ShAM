@@ -25,6 +25,6 @@
    1. Run the `shap` python file accordingly based on your generated images. i.e. if you use generate gaussian based images, run `shap_mike_withGaussianMask.py`.
 
 ## Demo
-Can be found in [here](https://github.com/Biomedical-Data-Design-2022-2023/ShAM/blob/main/Quadrant-based%20Feature%20Reduction/Quad_blackout_shapCal_pipeline.ipynb)
+Can be found [here](https://github.com/Biomedical-Data-Design-2022-2023/ShAM/blob/main/Quadrant-based%20Feature%20Reduction/Quad_blackout_shapCal_pipeline.ipynb)
 
    
