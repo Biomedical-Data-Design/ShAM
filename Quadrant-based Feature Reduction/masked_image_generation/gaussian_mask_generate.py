@@ -4,6 +4,15 @@ import numpy as np
 
 
 def gaussian_mask_generate(I, k, grey_area, ksize=(23, 23), std=13):
+    """
+    assign quadents of the image to black (masking certain region of the image to black) for masks using gaussian
+    input:
+      I: image
+      k: quadents index
+      grey area: quadents indexs that to be black out
+    output:
+      I_copy: is the blacked out masked image
+    """
     blurred_img = cv2.GaussianBlur(I, ksize, std)
     shape1=I.shape[0]//(2**k)
     shape2=I.shape[1]//(2**k)
