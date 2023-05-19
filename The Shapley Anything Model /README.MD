@@ -1,7 +1,7 @@
 # Example of using Shapley Anything Model
 
 1. Upload ths directory `./The Shapley Anything Model` to Google Drive.
-2. Download the trained VAE [here](https://drive.google.com/file/d/1IErXAztMMmB9wtI7fIQxbFxNRXXGt_MI/view?usp=share_link)
+2. Download the trained VAE [here](https://drive.google.com/file/d/1IErXAztMMmB9wtI7fIQxbFxNRXXGt_MI/view?usp=share_link) and classifier [here](https://github.com/Sulam-Group/h-shap/blob/main/demo/BBBC041/model.pt)
 3. Open `SHAM_Shapley_Calculation_Pipeline.ipynb` in the Google Colab.
 4. Change the `root_path` to the directory of this folder on google drive.
 5. Run the whole file.
